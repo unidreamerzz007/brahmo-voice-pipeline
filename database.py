@@ -2,7 +2,7 @@ import sqlite3
 import os
 import json
 
-DB_PATH = r"C:\Users\Adhi\.gemini\antigravity-ide\scratch\brahmo-voice-pipeline\pipeline.db"
+DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pipeline.db")
 
 def get_connection():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
